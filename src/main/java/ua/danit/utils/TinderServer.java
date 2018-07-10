@@ -20,7 +20,7 @@ public class TinderServer {
         handler.addServlet(userHolder, "/users");
 
         ServletHolder likedHolder = new ServletHolder(new LikedServlet());
-        handler.addServlet(likedHolder, "/liked");
+        handler.addServlet(likedHolder, "/*");
 
         ServletHolder messegeHolder = new ServletHolder(new MessegeIdSevlet());
         handler.addServlet(messegeHolder, "/messeges/*");
