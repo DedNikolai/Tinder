@@ -12,8 +12,10 @@ import java.util.EnumSet;
 import java.util.List;
 
 public class TinderServer {
-    public void tinderStart() throws Exception {
-        Server server = new Server(5000);
+
+    public void tinderStart( String port) throws Exception {
+
+        Server server = new Server(Integer.parseInt(port));
         ServletContextHandler handler = new ServletContextHandler();
 
         ServletHolder userHolder = new ServletHolder(new UserServlet());
